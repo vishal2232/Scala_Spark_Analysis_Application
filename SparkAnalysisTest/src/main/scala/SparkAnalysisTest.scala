@@ -17,7 +17,7 @@ object SparkAnalysisTest {
     val conf = new SparkConf().setAppName("Movie Application").setMaster("local")
     val sc = new SparkContext(conf)
 
-    val data = sc.textFile("C:\\Users\\Trainig\\Desktop\\hdp\\proj\\SimpleSparkAnalysis-master\\src\\main\\scala\\Records.user") //Location of the data file
+    val data = sc.textFile("C:\\Users\\Training\\Desktop\\hdp\\proj\\SimpleSparkAnalysis-master\\src\\main\\scala\\Records.user") //Location of the data file
       .map(line => line.split(","))
       .map(userColumn=>(userColumn(0), userColumn(1), userColumn(2), userColumn(3), userColumn(4)))
 	  
